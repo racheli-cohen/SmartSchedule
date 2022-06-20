@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinalProjectRachelShifiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FinalProjectRachelShifiEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AddressConstraints" EntityType="FinalProjectRachelShifiModel.AddressConstraint" />
+    <EntitySet Name="Ages" EntityType="FinalProjectRachelShifiModel.Age" />
+    <EntitySet Name="AgeConstraints" EntityType="FinalProjectRachelShifiModel.AgeConstraint" />
+    <EntitySet Name="Cities" EntityType="FinalProjectRachelShifiModel.City" />
+    <EntitySet Name="Classes" EntityType="FinalProjectRachelShifiModel.Class" />
+    <EntitySet Name="Days" EntityType="FinalProjectRachelShifiModel.Day" />
+    <EntitySet Name="DayConstraints" EntityType="FinalProjectRachelShifiModel.DayConstraint" />
+    <EntitySet Name="Exchangings" EntityType="FinalProjectRachelShifiModel.Exchanging" />
+    <EntitySet Name="Genders" EntityType="FinalProjectRachelShifiModel.Gender" />
+    <EntitySet Name="GenderConstraints" EntityType="FinalProjectRachelShifiModel.GenderConstraint" />
+    <EntitySet Name="Neighborhoods" EntityType="FinalProjectRachelShifiModel.Neighborhood" />
+    <EntitySet Name="Organizations" EntityType="FinalProjectRachelShifiModel.Organization" />
+    <EntitySet Name="Schedules" EntityType="FinalProjectRachelShifiModel.Schedule" />
+    <EntitySet Name="sysdiagrams" EntityType="FinalProjectRachelShifiModel.sysdiagram" />
+    <EntitySet Name="Teachers" EntityType="FinalProjectRachelShifiModel.Teacher" />
+    <EntitySet Name="YearForTeachers" EntityType="FinalProjectRachelShifiModel.YearForTeacher" />
+    <AssociationSet Name="FK_AddressConstraint_Neighborhood" Association="FinalProjectRachelShifiModel.FK_AddressConstraint_Neighborhood">
+      <End Role="Neighborhood" EntitySet="Neighborhoods" />
+      <End Role="AddressConstraint" EntitySet="AddressConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AddressConstraint_Teacher" Association="FinalProjectRachelShifiModel.FK_AddressConstraint_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="AddressConstraint" EntitySet="AddressConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AgeConstraint_Age" Association="FinalProjectRachelShifiModel.FK_AgeConstraint_Age">
+      <End Role="Age" EntitySet="Ages" />
+      <End Role="AgeConstraint" EntitySet="AgeConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Class_Age" Association="FinalProjectRachelShifiModel.FK_Class_Age">
+      <End Role="Age" EntitySet="Ages" />
+      <End Role="Class" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AgeConstraint_Teacher" Association="FinalProjectRachelShifiModel.FK_AgeConstraint_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="AgeConstraint" EntitySet="AgeConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Neighborhood_City" Association="FinalProjectRachelShifiModel.FK_Neighborhood_City">
+      <End Role="City" EntitySet="Cities" />
+      <End Role="Neighborhood" EntitySet="Neighborhoods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Class_Kind" Association="FinalProjectRachelShifiModel.FK_Class_Kind">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Class" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Class_Neighborhood" Association="FinalProjectRachelShifiModel.FK_Class_Neighborhood">
+      <End Role="Neighborhood" EntitySet="Neighborhoods" />
+      <End Role="Class" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Class_Organization" Association="FinalProjectRachelShifiModel.FK_Class_Organization">
+      <End Role="Organization" EntitySet="Organizations" />
+      <End Role="Class" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exchanging_Class" Association="FinalProjectRachelShifiModel.FK_Exchanging_Class">
+      <End Role="Class" EntitySet="Classes" />
+      <End Role="Exchanging" EntitySet="Exchangings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Class" Association="FinalProjectRachelShifiModel.FK_Schedule_Class">
+      <End Role="Class" EntitySet="Classes" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DayConstraint_Day" Association="FinalProjectRachelShifiModel.FK_DayConstraint_Day">
+      <End Role="Day" EntitySet="Days" />
+      <End Role="DayConstraint" EntitySet="DayConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Day" Association="FinalProjectRachelShifiModel.FK_Schedule_Day">
+      <End Role="Day" EntitySet="Days" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DayConstraint_Teacher" Association="FinalProjectRachelShifiModel.FK_DayConstraint_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="DayConstraint" EntitySet="DayConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exchanging_Teacher" Association="FinalProjectRachelShifiModel.FK_Exchanging_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="Exchanging" EntitySet="Exchangings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exchanging_Teacher1" Association="FinalProjectRachelShifiModel.FK_Exchanging_Teacher1">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="Exchanging" EntitySet="Exchangings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KindConstraint_G" Association="FinalProjectRachelShifiModel.FK_KindConstraint_G">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="GenderConstraint" EntitySet="GenderConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GenderConstraint_Teacher" Association="FinalProjectRachelShifiModel.FK_GenderConstraint_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="GenderConstraint" EntitySet="GenderConstraints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teacher_Neighborhood" Association="FinalProjectRachelShifiModel.FK_Teacher_Neighborhood">
+      <End Role="Neighborhood" EntitySet="Neighborhoods" />
+      <End Role="Teacher" EntitySet="Teachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_YearForTeacher_Organization" Association="FinalProjectRachelShifiModel.FK_YearForTeacher_Organization">
+      <End Role="Organization" EntitySet="Organizations" />
+      <End Role="YearForTeacher" EntitySet="YearForTeachers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Teacher" Association="FinalProjectRachelShifiModel.FK_Schedule_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_YearForTeacher_Teacher" Association="FinalProjectRachelShifiModel.FK_YearForTeacher_Teacher">
+      <End Role="Teacher" EntitySet="Teachers" />
+      <End Role="YearForTeacher" EntitySet="YearForTeachers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AddressConstraint">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacherId" Type="Int32" Nullable="false" />
+    <Property Name="neighborhoodCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Neighborhood" Relationship="FinalProjectRachelShifiModel.FK_AddressConstraint_Neighborhood" FromRole="AddressConstraint" ToRole="Neighborhood" />
+    <NavigationProperty Name="Teacher" Relationship="FinalProjectRachelShifiModel.FK_AddressConstraint_Teacher" FromRole="AddressConstraint" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Age">
+    <Key>
+      <PropertyRef Name="ageCode" />
+    </Key>
+    <Property Name="ageCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ageDescription" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AgeConstraints" Relationship="FinalProjectRachelShifiModel.FK_AgeConstraint_Age" FromRole="Age" ToRole="AgeConstraint" />
+    <NavigationProperty Name="Classes" Relationship="FinalProjectRachelShifiModel.FK_Class_Age" FromRole="Age" ToRole="Class" />
+  </EntityType>
+  <EntityType Name="AgeConstraint">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacherId" Type="Int32" Nullable="false" />
+    <Property Name="ageCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Age" Relationship="FinalProjectRachelShifiModel.FK_AgeConstraint_Age" FromRole="AgeConstraint" ToRole="Age" />
+    <NavigationProperty Name="Teacher" Relationship="FinalProjectRachelShifiModel.FK_AgeConstraint_Teacher" FromRole="AgeConstraint" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="cityCode" />
+    </Key>
+    <Property Name="cityCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cityName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Neighborhoods" Relationship="FinalProjectRachelShifiModel.FK_Neighborhood_City" FromRole="City" ToRole="Neighborhood" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="organizationCode" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="neighborhoodCode" Type="Int32" Nullable="false" />
+    <Property Name="street" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="buildingNumber" Type="Int32" Nullable="false" />
+    <Property Name="ageCode" Type="Int32" Nullable="false" />
+    <Property Name="genderCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Age" Relationship="FinalProjectRachelShifiModel.FK_Class_Age" FromRole="Class" ToRole="Age" />
+    <NavigationProperty Name="Gender" Relationship="FinalProjectRachelShifiModel.FK_Class_Kind" FromRole="Class" ToRole="Gender" />
+    <NavigationProperty Name="Neighborhood" Relationship="FinalProjectRachelShifiModel.FK_Class_Neighborhood" FromRole="Class" ToRole="Neighborhood" />
+    <NavigationProperty Name="Organization" Relationship="FinalProjectRachelShifiModel.FK_Class_Organization" FromRole="Class" ToRole="Organization" />
+    <NavigationProperty Name="Exchangings" Relationship="FinalProjectRachelShifiModel.FK_Exchanging_Class" FromRole="Class" ToRole="Exchanging" />
+    <NavigationProperty Name="Schedules" Relationship="FinalProjectRachelShifiModel.FK_Schedule_Class" FromRole="Class" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="Day">
+    <Key>
+      <PropertyRef Name="dayCode" />
+    </Key>
+    <Property Name="dayCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dayName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DayConstraints" Relationship="FinalProjectRachelShifiModel.FK_DayConstraint_Day" FromRole="Day" ToRole="DayConstraint" />
+    <NavigationProperty Name="Schedules" Relationship="FinalProjectRachelShifiModel.FK_Schedule_Day" FromRole="Day" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="DayConstraint">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacherId" Type="Int32" Nullable="false" />
+    <Property Name="dayCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Day" Relationship="FinalProjectRachelShifiModel.FK_DayConstraint_Day" FromRole="DayConstraint" ToRole="Day" />
+    <NavigationProperty Name="Teacher" Relationship="FinalProjectRachelShifiModel.FK_DayConstraint_Teacher" FromRole="DayConstraint" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Exchanging">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classId" Type="Int32" Nullable="false" />
+    <Property Name="sourceDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="teacherId" Type="Int32" Nullable="false" />
+    <Property Name="substituteTeacherId" Type="Int32" />
+    <Property Name="destinationDate" Type="DateTime" Precision="0" />
+    <Property Name="is_exchaning" Type="Boolean" Nullable="false" />
+    <Property Name="ask_id" Type="Int32" Nullable="false" />
+    <Property Name="is_relevant" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Class" Relationship="FinalProjectRachelShifiModel.FK_Exchanging_Class" FromRole="Exchanging" ToRole="Class" />
+    <NavigationProperty Name="Teacher" Relationship="FinalProjectRachelShifiModel.FK_Exchanging_Teacher" FromRole="Exchanging" ToRole="Teacher" />
+    <NavigationProperty Name="Teacher1" Relationship="FinalProjectRachelShifiModel.FK_Exchanging_Teacher1" FromRole="Exchanging" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="genderCode" />
+    </Key>
+    <Property Name="genderCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="genderDescription" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Classes" Relationship="FinalProjectRachelShifiModel.FK_Class_Kind" FromRole="Gender" ToRole="Class" />
+    <NavigationProperty Name="GenderConstraints" Relationship="FinalProjectRachelShifiModel.FK_KindConstraint_G" FromRole="Gender" ToRole="GenderConstraint" />
+  </EntityType>
+  <EntityType Name="GenderConstraint">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacherId" Type="Int32" Nullable="false" />
+    <Property Name="genderCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Gender" Relationship="FinalProjectRachelShifiModel.FK_KindConstraint_G" FromRole="GenderConstraint" ToRole="Gender" />
+    <NavigationProperty Name="Teacher" Relationship="FinalProjectRachelShifiModel.FK_GenderConstraint_Teacher" FromRole="GenderConstraint" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Neighborhood">
+    <Key>
+      <PropertyRef Name="neighborhoodCode" />
+    </Key>
+    <Property Name="neighborhoodCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="neighborhoodName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cityCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AddressConstraints" Relationship="FinalProjectRachelShifiModel.FK_AddressConstraint_Neighborhood" FromRole="Neighborhood" ToRole="AddressConstraint" />
+    <NavigationProperty Name="City" Relationship="FinalProjectRachelShifiModel.FK_Neighborhood_City" FromRole="Neighborhood" ToRole="City" />
+    <NavigationProperty Name="Classes" Relationship="FinalProjectRachelShifiModel.FK_Class_Neighborhood" FromRole="Neighborhood" ToRole="Class" />
+    <NavigationProperty Name="Teachers" Relationship="FinalProjectRachelShifiModel.FK_Teacher_Neighborhood" FromRole="Neighborhood" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Organization">
+    <Key>
+      <PropertyRef Name="organizationCode" />
+    </Key>
+    <Property Name="organizationCode" Type="Int32" Nullable="false" />
+    <Property Name="organizationName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Classes" Relationship="FinalProjectRachelShifiModel.FK_Class_Organization" FromRole="Organization" ToRole="Class" />
+    <NavigationProperty Name="YearForTeachers" Relationship="FinalProjectRachelShifiModel.FK_YearForTeacher_Organization" FromRole="Organization" ToRole="YearForTeacher" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="teacherId" Type="Int32" Nullable="false" />
+    <Property Name="classId" Type="Int32" Nullable="false" />
+    <Property Name="dayCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Class" Relationship="FinalProjectRachelShifiModel.FK_Schedule_Class" FromRole="Schedule" ToRole="Class" />
+    <NavigationProperty Name="Day" Relationship="FinalProjectRachelShifiModel.FK_Schedule_Day" FromRole="Schedule" ToRole="Day" />
+    <NavigationProperty Name="Teacher" Relationship="FinalProjectRachelShifiModel.FK_Schedule_Teacher" FromRole="Schedule" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="firstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="neighborhoodCode" Type="Int32" Nullable="false" />
+    <Property Name="street" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="buildingNumber" Type="Int32" Nullable="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AddressConstraints" Relationship="FinalProjectRachelShifiModel.FK_AddressConstraint_Teacher" FromRole="Teacher" ToRole="AddressConstraint" />
+    <NavigationProperty Name="AgeConstraints" Relationship="FinalProjectRachelShifiModel.FK_AgeConstraint_Teacher" FromRole="Teacher" ToRole="AgeConstraint" />
+    <NavigationProperty Name="DayConstraints" Relationship="FinalProjectRachelShifiModel.FK_DayConstraint_Teacher" FromRole="Teacher" ToRole="DayConstraint" />
+    <NavigationProperty Name="Exchangings" Relationship="FinalProjectRachelShifiModel.FK_Exchanging_Teacher" FromRole="Teacher" ToRole="Exchanging" />
+    <NavigationProperty Name="Exchangings1" Relationship="FinalProjectRachelShifiModel.FK_Exchanging_Teacher1" FromRole="Teacher" ToRole="Exchanging" />
+    <NavigationProperty Name="GenderConstraints" Relationship="FinalProjectRachelShifiModel.FK_GenderConstraint_Teacher" FromRole="Teacher" ToRole="GenderConstraint" />
+    <NavigationProperty Name="Neighborhood" Relationship="FinalProjectRachelShifiModel.FK_Teacher_Neighborhood" FromRole="Teacher" ToRole="Neighborhood" />
+    <NavigationProperty Name="Schedules" Relationship="FinalProjectRachelShifiModel.FK_Schedule_Teacher" FromRole="Teacher" ToRole="Schedule" />
+    <NavigationProperty Name="YearForTeachers" Relationship="FinalProjectRachelShifiModel.FK_YearForTeacher_Teacher" FromRole="Teacher" ToRole="YearForTeacher" />
+  </EntityType>
+  <EntityType Name="YearForTeacher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacherId" Type="Int32" Nullable="false" />
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="organizationCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Organization" Relationship="FinalProjectRachelShifiModel.FK_YearForTeacher_Organization" FromRole="YearForTeacher" ToRole="Organization" />
+    <NavigationProperty Name="Teacher" Relationship="FinalProjectRachelShifiModel.FK_YearForTeacher_Teacher" FromRole="YearForTeacher" ToRole="Teacher" />
+  </EntityType>
+  <Association Name="FK_AddressConstraint_Neighborhood">
+    <End Type="FinalProjectRachelShifiModel.Neighborhood" Role="Neighborhood" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.AddressConstraint" Role="AddressConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Neighborhood">
+        <PropertyRef Name="neighborhoodCode" />
+      </Principal>
+      <Dependent Role="AddressConstraint">
+        <PropertyRef Name="neighborhoodCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AddressConstraint_Teacher">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.AddressConstraint" Role="AddressConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AddressConstraint">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AgeConstraint_Age">
+    <End Type="FinalProjectRachelShifiModel.Age" Role="Age" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.AgeConstraint" Role="AgeConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Age">
+        <PropertyRef Name="ageCode" />
+      </Principal>
+      <Dependent Role="AgeConstraint">
+        <PropertyRef Name="ageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Class_Age">
+    <End Type="FinalProjectRachelShifiModel.Age" Role="Age" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Class" Role="Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Age">
+        <PropertyRef Name="ageCode" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="ageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AgeConstraint_Teacher">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.AgeConstraint" Role="AgeConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AgeConstraint">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Neighborhood_City">
+    <End Type="FinalProjectRachelShifiModel.City" Role="City" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Neighborhood" Role="Neighborhood" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="cityCode" />
+      </Principal>
+      <Dependent Role="Neighborhood">
+        <PropertyRef Name="cityCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Class_Kind">
+    <End Type="FinalProjectRachelShifiModel.Gender" Role="Gender" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Class" Role="Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="genderCode" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="genderCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Class_Neighborhood">
+    <End Type="FinalProjectRachelShifiModel.Neighborhood" Role="Neighborhood" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Class" Role="Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Neighborhood">
+        <PropertyRef Name="neighborhoodCode" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="neighborhoodCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Class_Organization">
+    <End Type="FinalProjectRachelShifiModel.Organization" Role="Organization" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Class" Role="Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organization">
+        <PropertyRef Name="organizationCode" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="organizationCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exchanging_Class">
+    <End Type="FinalProjectRachelShifiModel.Class" Role="Class" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Exchanging" Role="Exchanging" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Exchanging">
+        <PropertyRef Name="classId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Class">
+    <End Type="FinalProjectRachelShifiModel.Class" Role="Class" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Schedule" Role="Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="classId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DayConstraint_Day">
+    <End Type="FinalProjectRachelShifiModel.Day" Role="Day" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.DayConstraint" Role="DayConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Day">
+        <PropertyRef Name="dayCode" />
+      </Principal>
+      <Dependent Role="DayConstraint">
+        <PropertyRef Name="dayCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Day">
+    <End Type="FinalProjectRachelShifiModel.Day" Role="Day" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Schedule" Role="Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Day">
+        <PropertyRef Name="dayCode" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="dayCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DayConstraint_Teacher">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.DayConstraint" Role="DayConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DayConstraint">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exchanging_Teacher">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Exchanging" Role="Exchanging" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Exchanging">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exchanging_Teacher1">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="0..1" />
+    <End Type="FinalProjectRachelShifiModel.Exchanging" Role="Exchanging" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Exchanging">
+        <PropertyRef Name="substituteTeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KindConstraint_G">
+    <End Type="FinalProjectRachelShifiModel.Gender" Role="Gender" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.GenderConstraint" Role="GenderConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="genderCode" />
+      </Principal>
+      <Dependent Role="GenderConstraint">
+        <PropertyRef Name="genderCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GenderConstraint_Teacher">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.GenderConstraint" Role="GenderConstraint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="GenderConstraint">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teacher_Neighborhood">
+    <End Type="FinalProjectRachelShifiModel.Neighborhood" Role="Neighborhood" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Neighborhood">
+        <PropertyRef Name="neighborhoodCode" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="neighborhoodCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_YearForTeacher_Organization">
+    <End Type="FinalProjectRachelShifiModel.Organization" Role="Organization" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.YearForTeacher" Role="YearForTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organization">
+        <PropertyRef Name="organizationCode" />
+      </Principal>
+      <Dependent Role="YearForTeacher">
+        <PropertyRef Name="organizationCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Teacher">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.Schedule" Role="Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_YearForTeacher_Teacher">
+    <End Type="FinalProjectRachelShifiModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="FinalProjectRachelShifiModel.YearForTeacher" Role="YearForTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="YearForTeacher">
+        <PropertyRef Name="teacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

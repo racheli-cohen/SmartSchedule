@@ -1,0 +1,16 @@
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\BL.dll.config
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\BL.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\BL.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\obj\Debug\BL.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\obj\Debug\BL.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\DAL.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\DTO.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\EntityFramework.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\DAL.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\DAL.dll.config
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\DTO.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\DTO.dll.config
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\bin\Debug\EntityFramework.xml
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\BL\obj\Debug\BL.csproj.CopyComplete

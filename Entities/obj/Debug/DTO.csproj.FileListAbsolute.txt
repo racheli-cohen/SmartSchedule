@@ -1,0 +1,7 @@
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Entities\bin\Debug\DTO.dll.config
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Entities\bin\Debug\DTO.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Entities\bin\Debug\DTO.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Entities\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Entities\obj\Debug\DTO.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Entities\obj\Debug\DTO.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Entities\obj\Debug\DTO.csproj.AssemblyReference.cache

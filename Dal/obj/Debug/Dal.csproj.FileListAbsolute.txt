@@ -1,0 +1,12 @@
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\obj\Debug\Dal.csproj.CoreCompileInputs.cache
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\bin\Debug\DAL.dll.config
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\bin\Debug\DAL.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\bin\Debug\DAL.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\bin\Debug\EntityFramework.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\bin\Debug\EntityFramework.SqlServer.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\bin\Debug\EntityFramework.xml
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\bin\Debug\EntityFramework.SqlServer.xml
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\obj\Debug\Dal.csproj.CopyComplete
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\obj\Debug\DAL.dll
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\obj\Debug\DAL.pdb
+Y:\שנת פב\1\אברוצקי שיפי\FinalProject\Dal\obj\Debug\DAL.csproj.AssemblyReference.cache
