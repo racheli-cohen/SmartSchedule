@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-  public  class AgeDTO
+  public  class AgeDto
     {
        
-        public int ageCode { get; set; }
-        public string ageDescription { get; set; }
+        public int AgeCode { get; set; }
+        public string AgeDescription { get; set; }
 
     }
 }

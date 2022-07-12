@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class AgeConstraintDTO
+    public class AgeConstraintDto
     {
-        public int id { get; set; }
-        public int teacherId { get; set; }
-        public int ageCode { get; set; }
+        public int Id { get; set; }
+        public int TeacherId { get; set; }
+        public int AgeCode { get; set; }
     }
 }

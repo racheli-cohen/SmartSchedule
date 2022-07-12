@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class OrganizationDTO
+    public class OrganizationDto
     {
-        public int organizationCode { get; set; }
-        public string organizationName { get; set; }
+        public int OrganizationCode { get; set; }
+        public string OrganizationName { get; set; }
+
     }
 }

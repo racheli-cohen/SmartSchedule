@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class GenderDTO
+    public class GenderDto
     {
-        public int genderCode { get; set; }
-        public string genderDescription { get; set; }
+        public int GenderCode { get; set; }
+        public string GenderDescription { get; set; }
     }
 }

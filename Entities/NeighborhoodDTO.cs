@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class NeighborhoodDTO
+    public class NeighborhoodDto
     {
-        public int neighborhoodCode { get; set; }
-        public string neighborhoodName { get; set; }
-        public int cityCode { get; set; }
+        public int NeighborhoodCode { get; set; }
+        public string NeighborhoodName { get; set; }
+        public int CityCode { get; set; }
+        public string CityName { get; set; }
+
     }
 }

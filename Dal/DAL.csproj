@@ -70,6 +70,7 @@
     <Compile Include="Class.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Convert.cs" />
     <Compile Include="Day.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -147,6 +148,12 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\DTO.csproj">
+      <Project>{e16f1ad1-3e1a-448b-bfbb-4aa79fc8efba}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

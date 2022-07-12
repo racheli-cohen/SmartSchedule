@@ -6,16 +6,25 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ExchangingDTO
+    public class ExchangingDto
     {
-        public int id { get; set; }
-        public int classId { get; set; }
-        public System.DateTime sourceDate { get; set; }
-        public int teacherId { get; set; }
-        public Nullable<int> substituteTeacherId { get; set; }
-        public Nullable<System.DateTime> destinationDate { get; set; }
-        public bool is_exchaning { get; set; }
-        public int ask_id { get; set; }
-        public bool is_relevant { get; set; }
+        public int Id { get; set; }
+        public int ClassId { get; set; }
+        public string ClassName { get; set; }
+        public string SourceDate { get; set; }
+        public string SourceDayName { get; set; }
+        public int TeacherId { get; set; }
+        public string TeacherName { get; set; }
+        public int? SubstituteTeacherId { get; set; }
+        public string SubstituteTeacherName { get; set; }
+        public string DestinationDate { get; set; }
+        public string DestinationDayName { get; set; }
+        public bool IsExchanging { get; set; }
+        public string Message { get; set; }
+        public string ClassAddress { get; set; }
+        public int AskId { get; set; }
+        public bool IsRelevant { get; set; }
+
+
     }
 }

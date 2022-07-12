@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class AddressConstraintDTO
+    public class AddressConstraintDto
     {
-        public int id { get; set; }
-        public int teacherId { get; set; }
-        public int neighborhoodCode { get; set; }
+        public int Id { get; set; }
+        public int TeacherId { get; set; }
+        public int NeighborhoodCode { get; set; }
 
      
     }

@@ -46,22 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgeConstraintDTO.cs" />
-    <Compile Include="CityDTO.cs" />
-    <Compile Include="ClassDTO.cs" />
-    <Compile Include="DayConstraintDTO.cs" />
-    <Compile Include="DayDTO.cs" />
-    <Compile Include="ExchangingDTO.cs" />
-    <Compile Include="GenderConstraintDTO.cs" />
-    <Compile Include="GenderDTO.cs" />
-    <Compile Include="NeighborhoodDTO.cs" />
-    <Compile Include="OrganizationDTO.cs" />
+    <Compile Include="AgeConstraintDto.cs" />
+    <Compile Include="CityDto.cs" />
+    <Compile Include="ClassDto.cs" />
+    <Compile Include="DayConstraintDto.cs" />
+    <Compile Include="DayDto.cs" />
+    <Compile Include="DetailsDto.cs" />
+    <Compile Include="ExchangingDto.cs" />
+    <Compile Include="GenderConstraintDto.cs" />
+    <Compile Include="GenderDto.cs" />
+    <Compile Include="NeighborhoodDto.cs" />
+    <Compile Include="OrganizationDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AddressConstraintDTO.cs" />
-    <Compile Include="AgeDTO.cs" />
-    <Compile Include="ScheduleDTO.cs" />
-    <Compile Include="TeacherDTO.cs" />
-    <Compile Include="YearForTeacherDTO.cs" />
+    <Compile Include="AddressConstraintDto.cs" />
+    <Compile Include="AgeDto.cs" />
+    <Compile Include="TeacherScheduleDto.cs" />
+    <Compile Include="TeacherDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

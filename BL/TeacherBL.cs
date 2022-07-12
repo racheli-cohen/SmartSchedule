@@ -10,26 +10,22 @@ namespace BL
 {
     public class TeacherBL
     {
-        public static TeacherDTO GetTeacherById(int id)
+        public static List<TeacherDto> GetTeacherList()
         {
-            Teacher t = new TeacherDAL().GetTeacherById(id);
-            TeacherDTO dto = new Converters().ConvertTeacherToDto(t);
-
-            return dto;
+            return TeacherDAL.GetTeachers();
         }
-        public static List<TeacherDTO> GetTeachers()
+        public static TeacherDto GetTeacherById(int id)
         {
-            List<Teacher> teachers = new TeacherDAL().GetTeachers();
-
-            List<TeacherDTO> dto = new Converters().ConvertListTeacherToTeacherDto(teachers);
-
-            return dto;
+            return TeacherDAL.GetTeacherById(id);
         }
-        public static TeacherDTO Login(string email, string password)
+
+
+
+
+        public static TeacherDto Login(string email, string password)
         {
-            Teacher t = new TeacherDAL().Login(email, password);
-            TeacherDTO dto = new Converters().ConvertTeacherToDto(t);
-            return dto;
+            TeacherDto t = new TeacherDAL().Login(email, password);
+            return t;
         }
 
     }

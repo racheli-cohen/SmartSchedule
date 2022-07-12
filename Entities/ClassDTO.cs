@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ClassDTO
+    public class ClassDto
     {
-        public int id { get; set; }
-        public int organizationCode { get; set; }
-        public string name { get; set; }
-        public int neighborhoodCode { get; set; }
-        public string street { get; set; }
-        public int buildingNumber { get; set; }
-        public int ageCode { get; set; }
-        public int genderCode { get; set; }
+        public int Id { get; set; }
+        public int OrganizationCode { get; set; }
+        public string Name { get; set; }
+        public int NeighborhoodCode { get; set; }
+        public string Street { get; set; }
+        public int BuildingNumber { get; set; }
+        public int AgeCode { get; set; }
+        public int GenderCode { get; set; }
 
     }
 }

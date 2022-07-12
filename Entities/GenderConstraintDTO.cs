@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class GenderConstraintDTO
+    public class GenderConstraintDto
     {
-        public int id { get; set; }
-        public int teacherId { get; set; }
-        public int genderCode { get; set; }
+        public int Id { get; set; }
+        public int TeacherId { get; set; }
+        public int GenderCode { get; set; }
+        public string GenderName { get; set; }
     }
 }

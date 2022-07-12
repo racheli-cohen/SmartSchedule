@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,28 +7,34 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-   public class TeacherDAL
+    public class TeacherDAL
     {
-        public Teacher GetTeacherById(int id)
+        public static List<TeacherDto> GetTeachers()
         {
-            using (FinalProjectRachelShifiEntities2 ctx = new FinalProjectRachelShifiEntities2())
+            List<Teacher> list = new List<Teacher>();
+            using (FinalProjectRachelShifiEntities2 db = new FinalProjectRachelShifiEntities2())
             {
-                return ctx.Teachers.Find(id);
+                list = db.Teachers.ToList();
             }
+            return Convert.ConvertToTeacherDtoList(list);
+
         }
-        public List<Teacher> GetTeachers()
+        public static TeacherDto GetTeacherById(int id)
         {
-            using (FinalProjectRachelShifiEntities2 ctx = new FinalProjectRachelShifiEntities2())
+            Teacher t = new Teacher();
+            using (FinalProjectRachelShifiEntities2 db = new FinalProjectRachelShifiEntities2())
             {
-                return ctx.Teachers.ToList();
+                t = db.Teachers.ToList().First(a => a.id == id);
             }
+            return Convert.ConvertToTeacherDto(t);
         }
-        public Teacher Login(string email,string password)
+
+        public TeacherDto Login(string email, string password)
         {
             using (FinalProjectRachelShifiEntities2 ctx = new FinalProjectRachelShifiEntities2())
             {
-                Teacher t2 = ctx.Teachers.FirstOrDefault(x => x.email == email&&x.password==password);
-                 return t2;
+                Teacher t2 = ctx.Teachers.FirstOrDefault(x => x.email == email && x.password == password);
+                return Convert.ConvertToTeacherDto(t2);
             }
         }
     }

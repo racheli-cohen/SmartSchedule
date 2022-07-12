@@ -30,7 +30,7 @@ namespace A_Test
         private void button2_Click(object sender, EventArgs e)
         {
 
-            dataGridView1.DataSource = TeacherBL.GetTeachers().ToList();
+            dataGridView1.DataSource = TeacherBL.GetTeacherList().ToList();
         }
 
         private void button3_Click(object sender, EventArgs e)
